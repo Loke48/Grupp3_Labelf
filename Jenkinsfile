@@ -1,12 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage('Checkout') {
-            steps {
-                git 'https://github.com//Loke48/Grupp3_Labelf.git'
-            }
-        }
-      
+       
         stage('Robot Framework System tests with Selenium') {
             steps {
                 sh 'robot --variable BROWSER:headlesschrome -d AutoTests/Results AutoTests/Tests'
