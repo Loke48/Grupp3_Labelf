@@ -6,11 +6,7 @@ pipeline {
                 git 'https://github.com//Loke48/Grupp3_Labelf.git'
             }
         }
-        stage('Build') {
-            steps {
-                sh "mvn compile"
-            }
-        }
+      
         stage('Robot Framework System tests with Selenium') {
             steps {
                 sh 'robot --variable BROWSER:headlesschrome -d AutoTests/Results AutoTests/Tests'
