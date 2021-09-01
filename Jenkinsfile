@@ -1,15 +1,10 @@
 pipeline {
     agent any
     stages {
-        stage('Checkout') {
-            steps {
-                git 'https://github.com//Loke48/Grupp3_Labelf.git'
-            }
-        }
-
+       
         stage('Robot Framework System tests with Selenium') {
             steps {
-                bat 'robot --variable BROWSER:headlesschrome -d AutoTests/Results AutoTests/Tests'
+                sh 'robot --variable BROWSER:headlesschrome -d AutoTests/Results AutoTests/Tests'
             }
             post {
                 always {
@@ -17,7 +12,7 @@ pipeline {
                           step(
                                 [
                                   $class              : 'RobotPublisher',
-                                  outputPath          : 'Robot_tests/Results',
+                                  outputPath          : 'AutoTests/Results',
                                   outputFileName      : '**/output.xml',
                                   reportFileName      : '**/report.html',
                                   logFileName         : '**/log.html',
