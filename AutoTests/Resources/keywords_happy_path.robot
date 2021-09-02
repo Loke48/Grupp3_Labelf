@@ -66,9 +66,12 @@ When user presses 'no'
     Click Button                    xpath://*[@id="app"]/div[2]/div/div/div[3]/button[2]
     Wait until Page Contains        Accuracy
 
+When user presses 'yes'
+    Click Button                    xpath://*[@id="app"]/div[2]/div/div/div[3]/button[1]
+    Wait until Page Contains        Accuracy
+
 Then user goes back to dashboard/deploy
     Page should contain             Accuracy
-
 
 End Web Test
     Close Browser

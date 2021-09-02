@@ -33,7 +33,7 @@ Test button to deploy works
 
 Test button for option no works
     [Documentation]     Test to press 'no' when asked if wanting to download dataset Bikes
-    [Tags]    LG3-
+    [Tags]    LG3-115
     Go to Web Page
     Given that user enters a valid username and password
     When user presses LOGIN
@@ -46,4 +46,21 @@ Test button for option no works
     Then the user should see a option to download dataset
     Given that user has pressed 'download dataset'
     When user presses 'no'
+    Then user goes back to dashboard/deploy
+
+Test button for option yes works
+    [Documentation]     Test to press 'yes' when asked if wanting to download dataset Bikes
+    [Tags]    LG3-116
+    Go to Web Page
+    Given that user enters a valid username and password
+    When user presses LOGIN
+    Then user should be logged in
+    Given that user are on workspace with the dataset Bikes
+    When user presses 'overview'
+    Then user should see overview startpage
+    Given that user are on overview startpage
+    When user presses 'deploy'
+    Then the user should see a option to download dataset
+    Given that user has pressed 'download dataset'
+    When user presses 'yes'
     Then user goes back to dashboard/deploy
