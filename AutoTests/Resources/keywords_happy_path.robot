@@ -29,6 +29,7 @@ When user presses LOGIN
 Then user should be logged in
     Wait until Page Contains        Logged in
     Go to                           https://app.labelf.ai/main/57/datasets/view
+    Wait until Page Contains        Datasets
     Page Should Contain             Datasets
 
 Given that user are on workspace with the dataset Bikes
