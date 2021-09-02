@@ -57,6 +57,17 @@ Then the user should see a option to download dataset
     ${TOOL_TEXT}                    Get Text             xpath://*[@id="app"]/div[4]/div[1]/main/div/div/div[2]/div/div/div[1]/div[2]/div/nav/div/div
     Should Be Equal                 ${TOOL_TEXT}         Deploy / Download
 
+Given that user has pressed 'download dataset'
+    Click Button                    xpath://*[@id="app"]/div[4]/div[1]/main/div/div/div[2]/div/div/div[1]/div[2]/div/div/button[1]
+    Wait until Page Contains        Do you wish to continue?
+    Page should contain             Accuracy
+
+When user presses 'no'
+    Click Button                    xpath://*[@id="app"]/div[2]/div/div/div[3]/button[2]
+    Wait until Page Contains        Accuracy
+
+Then user goes back to dashboard/deploy
+    Page should contain             Accuracy
 
 
 End Web Test
