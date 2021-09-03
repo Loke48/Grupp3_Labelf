@@ -6,6 +6,10 @@ ${URL}          https://app.labelf.ai/login/
 Begin Web Test
     Open browser                     about:blank             ${BROWSER}
     Set selenium timeout             10
+    Go to Web Page
+    Given that user enters a valid username and password
+    When user presses LOGIN
+    Then user should be logged in
 
 Go to Web Page
     Load Page
@@ -44,6 +48,9 @@ Then user should see overview startpage
     Should Be Equal                 ${URL_OV}           https://app.labelf.ai/main/57/datasets/219/dashboard/dashboard
 
 Given that user are on overview startpage
+    Given that user are on workspace with the dataset Bikes
+    When user presses 'overview'
+    Then user should see overview startpage
     ${URL_OV}                       Get Location
     Should Be Equal                 ${URL_OV}           https://app.labelf.ai/main/57/datasets/219/dashboard/dashboard
 
@@ -58,6 +65,9 @@ Then the user should see a option to download dataset
     Should Be Equal                 ${TOOL_TEXT}         Deploy / Download
 
 Given that user has pressed 'download dataset'
+    Given that user are on overview startpage
+    When user presses 'deploy'
+    Then the user should see a option to download dataset
     Click Button                    xpath://*[@id="app"]/div[4]/div[1]/main/div/div/div[2]/div/div/div[1]/div[2]/div/div/button[1]
     Wait until Page Contains        Do you wish to continue?
     Page should contain             Accuracy
