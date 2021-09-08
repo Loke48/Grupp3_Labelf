@@ -21,6 +21,6 @@ När vi har analyserat dataseten så ligger dom i Anteckningar för varje testfa
 <br>
 Detta är vår JIRA:
 https://ithsgrupp3.atlassian.net/jira/software/projects/LG3/boards/5
-För eventuell berhörighet (kan tyvärr inte lova att detta kommer att gå efter mer än 6 månader efter avslutat projekt :) ), 
+För eventuell berhörighet (kan tyvärr inte lova att detta kommer att gå efter mer än 6 månader efter avslutat projekt :) ) eller övriga frågor, 
 kontakta Samuela Lundborg på samuelalundborg@gmail.com
 
