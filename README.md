@@ -9,6 +9,8 @@ Vår mapp struktur är som följande:
   Dom som är mappar har tillhörande anteckningar och eventuella bilder som hör till testrapporten. De som enbart är en testrapport har mindre anteckningar inuti rapporten. 
 <br>
 När vi har analyserat dataseten så ligger dom i Anteckningar för varje testfall, där det även finns en summering högst upp och tillhörande bilder. 
+
+I detta dokumentet har alla gruppers buggrapporteringar samlas: https://docs.google.com/spreadsheets/d/17-tFI6LilWOn7rt_VXN7V-F64qXNBCl6ifn6tzZ0KCc/edit#gid=0
 <br>
 <br>
 <br>
